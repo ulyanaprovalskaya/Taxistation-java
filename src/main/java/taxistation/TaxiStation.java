@@ -1,13 +1,15 @@
-package connection.cars;
+package taxistation;
 
+import cars.Car;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import connection.comparator.PowerComparator;
+import comparator.PowerComparator;
+import org.apache.log4j.*;
 
 import java.util.*;
 
 @XStreamAlias("taxiStation")
 public class TaxiStation {
-    //@XStreamImplicit
+    private static final Logger logger = LogManager.getLogger(TaxiStation.class);
     private List<Car> cars;
 
     public List<Car> getCars() { return cars; }
@@ -17,11 +19,12 @@ public class TaxiStation {
     }
 
     public TaxiStation(){
-        cars = new ArrayList<Car>();
+        cars = new ArrayList<>();
     }
 
     public int getCost()
     {
+        logger.info("Cost of the taxi station was calculated");
         int cost = 0;
         for(Car car : cars){
             cost += car.getPrice();
@@ -30,7 +33,8 @@ public class TaxiStation {
     }
 
     public ArrayList<Car> getCarsByGivenProperties(int maxSpeed, double accelerationTime){
-        ArrayList<Car> suitableCars = new ArrayList<Car>();
+        logger.info("Taxi station was searched for speed properties");
+        ArrayList<Car> suitableCars = new ArrayList<>();
 
         for(Car car : cars){
             if(car.getMaxSpeed() >= maxSpeed && car.getAccelerationTime() <= accelerationTime){
@@ -40,7 +44,8 @@ public class TaxiStation {
         return suitableCars;
     }
 
-    public void sort(){
+    public void sortByEnginePower(){
         cars.sort(new PowerComparator());
+        logger.info("Cars were sorted by engine power");
     }
 }

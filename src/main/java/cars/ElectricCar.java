@@ -1,8 +1,6 @@
-package connection.cars;
+package cars;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
-import javax.xml.bind.annotation.*;
 
 //@XmlType(propOrder = {"reservePower", "minChargeTime"})
 @XStreamAlias("electricCar")
@@ -34,7 +32,6 @@ public class ElectricCar extends Car {
 
     @Override
     public String toString(){
-        StringBuilder result = new StringBuilder(super.toString() + ", запас хода: " + reservePower + ", время зарядки: " + minChargeTime);
-        return result.toString();
+        return super.toString() + ", запас хода: " + reservePower + ", время зарядки: " + minChargeTime;
     }
 }

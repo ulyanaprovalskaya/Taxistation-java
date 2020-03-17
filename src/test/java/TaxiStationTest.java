@@ -1,10 +1,7 @@
-package test;
-
-import connection.cars.Car;
-import connection.cars.ElectricCar;
-import connection.cars.PetrolCar;
-import connection.cars.TaxiStation;
-import org.junit.Before;
+import cars.Car;
+import cars.ElectricCar;
+import cars.PetrolCar;
+import taxistation.TaxiStation;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -19,7 +16,7 @@ public class TaxiStationTest {
     private static TaxiStation taxiStation;
 
     @BeforeClass
-    public static void initializeInstance(){
+    public static void setUp(){
         taxiStation = new TaxiStation();
         ElectricCar electricCar = new ElectricCar();
         electricCar.setPrice(560);
@@ -39,7 +36,7 @@ public class TaxiStationTest {
         petrolCar2.setMaxSpeed(180);
         petrolCar2.setAccelerationTime(6.0);
 
-        List<Car> cars = new ArrayList<Car>();
+        List<Car> cars = new ArrayList<>();
         cars.add(electricCar);
         cars.add(petrolCar1);
         cars.add(petrolCar2);
@@ -65,20 +62,20 @@ public class TaxiStationTest {
 
     @Test
     public void sort() {
-        List<Integer> powers = new ArrayList<Integer>();
-        List<Integer> sortedPowers = new ArrayList<Integer>();
+        List<Integer> actualValues = new ArrayList<Integer>();
+        List<Integer> expectedValues = new ArrayList<Integer>();
 
         for(Car car : taxiStation.getCars()){
-            powers.add(car.getEnginePower());
+            actualValues.add(car.getEnginePower());
         }
-        Collections.sort(powers);
+        Collections.sort(actualValues);
 
-        taxiStation.sort();
+        taxiStation.sortByEnginePower();
 
         for(Car car : taxiStation.getCars()){
-            sortedPowers.add(car.getEnginePower());
+            expectedValues.add(car.getEnginePower());
         }
 
-        assertEquals(powers, sortedPowers);
+        assertEquals(actualValues, expectedValues);
     }
 }

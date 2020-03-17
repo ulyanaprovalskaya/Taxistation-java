@@ -1,8 +1,6 @@
-package connection.cars;
+package cars;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-
-import javax.xml.bind.annotation.*;
 
 @XStreamAlias("petrolCar")
 public class PetrolCar extends Car {
@@ -33,7 +31,6 @@ public class PetrolCar extends Car {
 
     @Override
     public String toString(){
-        StringBuilder result = new StringBuilder(super.toString() + ", расход топлива: " + petrolConsumption);
-        return result.toString();
+        return super.toString() + ", расход топлива: " + petrolConsumption;
     }
 }

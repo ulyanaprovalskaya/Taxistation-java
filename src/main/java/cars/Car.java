@@ -1,4 +1,4 @@
-package connection.cars;
+package cars;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -58,7 +58,6 @@ public class Car {
 
     @Override
     public String toString(){
-        StringBuilder result = new StringBuilder("\n" + model + "\nМаксимальная скорость: " + maxSpeed + ", время разгона до 10 км/ч: " + accelerationTime);
-        return result.toString();
+        return "\n" + model + "\nМаксимальная скорость: " + maxSpeed + ", время разгона до 10 км/ч: " + accelerationTime;
     }
 }
