@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<taxiStation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <cars>
+    <petrolCar>
+      <model>Renault Logan</model>
+      <price>8340</price>
+      <maxSpeed>162</maxSpeed>
+      <accelerationTime>10.5</accelerationTime>
+      <enginePower>82</enginePower>
+      <petrolConsumption>6.6</petrolConsumption>
+      <exhaustLevel>3.1</exhaustLevel>
+    </petrolCar>
+    <petrolCar>
+      <model>Shkoda Oktavia</model>
+      <price>17087</price>
+      <maxSpeed>250</maxSpeed>
+      <accelerationTime>6.7</accelerationTime>
+      <enginePower>150</enginePower>
+      <petrolConsumption>5.5</petrolConsumption>
+      <exhaustLevel>2.7</exhaustLevel>
+    </petrolCar>
+    <petrolCar>
+      <model>Nissan Almera</model>
+      <price>7915</price>
+      <maxSpeed>184</maxSpeed>
+      <accelerationTime>8.2</accelerationTime>
+      <enginePower>143</enginePower>
+      <petrolConsumption>6.8</petrolConsumption>
+      <exhaustLevel>3.0</exhaustLevel>
+    </petrolCar>
+    <electricCar>
+      <model>BMW I3</model>
+      <price>27900</price>
+      <maxSpeed>160</maxSpeed>
+      <accelerationTime>6.9</accelerationTime>
+      <enginePower>178</enginePower>
+      <reservePower>200</reservePower>
+      <minChargeTime>4</minChargeTime>
+    </electricCar>
+    <electricCar>
+      <model>Tesla Model X</model>
+      <price>89090</price>
+      <maxSpeed>250</maxSpeed>
+      <accelerationTime>3.4</accelerationTime>
+      <enginePower>772</enginePower>
+      <reservePower>475</reservePower>
+      <minChargeTime>2</minChargeTime>
+    </electricCar>
+    <electricCar>
+      <model>Volkswagen e-Golf</model>
+      <price>12506</price>
+      <maxSpeed>150</maxSpeed>
+      <accelerationTime>9.6</accelerationTime>
+      <enginePower>115</enginePower>
+      <reservePower>300</reservePower>
+      <minChargeTime>4</minChargeTime>
+    </electricCar>
+  </cars>
+</taxiStation>
