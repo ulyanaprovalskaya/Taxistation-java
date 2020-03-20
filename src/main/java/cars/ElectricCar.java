@@ -2,7 +2,7 @@ package cars;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-//@XmlType(propOrder = {"reservePower", "minChargeTime"})
+
 @XStreamAlias("electricCar")
 public class ElectricCar extends Car {
     private int reservePower;
