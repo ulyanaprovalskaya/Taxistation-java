@@ -21,6 +21,8 @@ public class Main {
         int maxSpeed = scan.nextInt();
         System.out.println("И желаемое время разгона до 100 км/ч:");
         double accelerationTime = scan.nextDouble();
-        System.out.println(taxiStation.getCarsByGivenProperties(maxSpeed, accelerationTime).toString());
+        List<Car> suitableCars = taxiStation.getCarsByGivenProperties(maxSpeed, accelerationTime);
+        if(suitableCars.isEmpty()) System.out.println("Не найдено машин по заданным параметрам");
+        else System.out.println(suitableCars.toString());
     }
 }
